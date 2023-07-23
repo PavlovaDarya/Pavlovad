@@ -1,0 +1,15 @@
+from random import randint
+A = []  
+m = int(input("строки "))
+n = int(input("столбцы "))
+S = [[randint(-10, 10) for _ in range(n)] for j in range(m)]  
+print('матрица')
+for i in range(len(S)):  
+    print(' '.join(map(str, S[i])))
+for x in range(m):  
+    min_stroki = [S[x][i] for i in range(n)]
+    A.append(min(min_stroki))  
+for i in range(len(A)): 
+    print('минимум', i+1, 'строки =', A[i])
+A.sort()  
+print('отсортированный', ' '.join(map(str, A)))  
