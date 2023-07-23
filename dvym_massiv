@@ -1,0 +1,17 @@
+n=int(input("Колл-во строк: "))
+m=int(input("Колл-во столбцов: "))
+a=[]
+a=[[0]*m for i in range (n)]
+print()
+from random import randint
+for i in range (n):
+    for j in range (m):
+        a[i] [j]=randint (-20,20)
+        print("{:4d}".format (a[i][j]), end=' ')
+    print()
+print()
+for j in range (m):
+    s=0
+    for i in range (n):
+        s+=a[i][l]/m
+print("Среднее арифметическое элементов 2-го столбца: ","%.2f" %s)
