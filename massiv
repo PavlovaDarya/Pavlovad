@@ -1,0 +1,29 @@
+name = input("Введите имя массива: ")
+aname = input("Введите имя автора массива: ")
+m = int(input("Количество строк: "))
+n = int(input("Количество столбцов: "))
+L = int(input("Длина слотов: "))
+n1 = int(input("Адрес нулевого слота: "))
+arr = []
+V = []
+for i in range(m):
+    arr.append(list(map(int,input().split())))
+for i in range(n):
+    for j in range(n):
+        temp = (str(i),str(j),str(n1))
+        V.append(temp)
+        n1+=L
+
+print("Дескриптор данного массива\n")
+
+print("Имя массива: ",name)
+print("Автор массива: ",aname)
+print("Адрес нулевого слота: ",0)
+print("Адрес первого(начального) слота массива: ",n1)
+print("Количество строк: ",m)
+print("Количество столбцов: ",n)
+print("Индекс i | Индекс k | Дескриптор D")
+for i in V:
+    print(i[0]+"|"+i[1]+"|"+i[2])
+print("Тип элемента - int")
+print("Длина слота: ", L)
