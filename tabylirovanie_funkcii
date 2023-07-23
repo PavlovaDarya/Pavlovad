@@ -1,0 +1,14 @@
+import math
+def F(x):
+    d=math.sqrt(x)*math.cos(x)**2
+    return (d)
+a=float (input('Введите a='))
+b=float (input('Введите b='))
+h=float (input('Введите h='))
+print('|{:3}|{:4}'.format('X','Y'))
+print('---------')
+a=a-h
+while a<=(b):
+    a+=h
+    print('|{:^3.2f}|{:^4.2f}|'.format(a,F(a)))
+    print('---------')
