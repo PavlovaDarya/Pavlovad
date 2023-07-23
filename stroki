@@ -1,0 +1,23 @@
+from math import sqrt
+
+#  ОТВГОСЕЬЬТАДВ_С_ЬЗАТТЕЫАЧ
+
+str1=str(input('Введите зашифрованное выражение:'))
+n=int(sqrt(len(str1)))
+A=[]
+B=[]
+for i in range(n):
+    for j in range(n):
+        A.append(str1[(i*n)+j])
+for i in range(n):
+    B.append(A[i*n+2])
+    B.append(A[i*n+0])
+    B.append(A[i*n+3])
+    B.append(A[i*n+4])
+    B.append(A[i*n+1])
+    print(B)
+print('Расшифровка по столбцам: ',end='')
+for i in range(n*n):
+    print(B[i], end='')
+print('\nПавлова Д.Ю.')
+print()
