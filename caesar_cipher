@@ -1,0 +1,16 @@
+alfavit = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+N = int(input("Шаг шифровки: "))
+txt = input("Текст для шифрования: ")
+itog = ''
+
+txt = txt.upper()
+
+for i in txt:
+    mesto = alfavit.find(i)
+    new_mesto = mesto + N
+    if i in alfavit:
+        itog+=alfavit[(new_mesto%len(alfavit))]
+    else:
+        itog+=1
+print(itog)
+
